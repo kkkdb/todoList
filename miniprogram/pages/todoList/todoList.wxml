@@ -1,0 +1,34 @@
+<!--miniprogram/pages/todoList/todoList.wxml-->
+<view class="todo-list">
+  <view class="user">
+    <image class="avatar" src="{{userInfo.avatarUrl || '../../images/cloud.png'}}" background-size="cover"></image>
+    <view class="nickname">{{userInfo.nickName && userInfo.nickName + "'s" || 'My'}} Todo List</view>
+  </view>
+
+  <view class="add-todo">
+    <input 
+      class="add-todo-input"
+      placeholder="What needs to be done?"
+      bindinput="onInput"
+      bindconfirm="addTodo"
+      value="{{inputValue}}"
+      focus="{{focus}}"
+    />
+    <image wx:if="{{inputValue.length}}" catchtap='closeInput' class='close close-input' src="../../images/clear.png"></image>
+  </view>
+  
+  <view class="todo-items">
+    <view class="todo-items-group">
+      <label wx:for="{{todos}}" class="todo-item {{item.completed ? 'checked' : ''}}" wx:key="{{text}}" bindtap='changeToDos' data-text="{{item.text}}">
+        <checkbox class="todo-item-checkbox" value="{{item.text}}" checked="{{item.completed}}" />
+        <text class="todo-item-text">{{item.text}}</text>
+        <image catchtap='closeItem' data-index='{{index}}' class='close' src="../../images/clear.png"></image>
+      </label>  
+    </view>
+  </view>
+
+  <!-- <view class="todo-footer">
+    <addButton text="Add Todo" bindclickme="addTodo"></addButton>
+  </view> -->
+
+</view>

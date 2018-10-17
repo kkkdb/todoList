@@ -1,0 +1,13 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/todoList/todoList"
+  ],
+  "window": {
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "cloud",
+    "navigationBarTextStyle": "black"
+  }
+}
