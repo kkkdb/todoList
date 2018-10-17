@@ -1,6 +1,6 @@
 # 小程序 云开发 todoList
 
-简单的todoList，运用了小程序的云开发框架（tcb-router）
+简单的todoList，云函数上用了小程序的云开发框架（tcb-router）
 
 ## 参考文档
 
